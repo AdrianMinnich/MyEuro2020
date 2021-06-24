@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LDL-cQ-NRI">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="MyEuro2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Exe-95-Jbh">
+                                <rect key="frame" x="12.666666666666657" y="20" width="350" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="Tne-n0-JVo"/>
+                                    <constraint firstAttribute="width" constant="350" id="YEX-tL-bWX"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bm1-JB-57x">
+                                <rect key="frame" x="20" y="626" width="335" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="My Euro 2020 Predictor"/>
+                                <connections>
+                                    <action selector="didTapPredictorButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OD2-cV-Z6Z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vV9-ja-Kzg">
+                                <rect key="frame" x="20" y="558" width="335" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <state key="normal" title="Euro 2020 Results"/>
+                                <connections>
+                                    <action selector="didTapResultsButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jov-Oe-Pfn"/>
+                                    <segue destination="ajF-D6-ea2" kind="show" id="4JP-qa-00s"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vV9-ja-Kzg" secondAttribute="trailing" constant="20" id="3Cn-fP-G3P"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bm1-JB-57x" secondAttribute="trailing" constant="20" id="JHj-oS-0ob"/>
+                            <constraint firstItem="bm1-JB-57x" firstAttribute="top" secondItem="vV9-ja-Kzg" secondAttribute="bottom" constant="20" id="NhW-XD-JwB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bm1-JB-57x" secondAttribute="bottom" constant="20" id="f0Q-jN-m1D"/>
+                            <constraint firstItem="bm1-JB-57x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fNb-1h-aNU"/>
+                            <constraint firstItem="Exe-95-Jbh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iSm-Vg-Y1M"/>
+                            <constraint firstItem="vV9-ja-Kzg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="oqL-hM-b4t"/>
+                            <constraint firstItem="Exe-95-Jbh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="zpR-c1-Wuo"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cYb-h8-QFH"/>
+                    <connections>
+                        <outlet property="imageView" destination="Exe-95-Jbh" id="SAl-eM-bmz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="139"/>
+        </scene>
+        <!--Predictor View Controller-->
+        <scene sceneID="svd-qs-KDM">
+            <objects>
+                <viewController storyboardIdentifier="PredictorViewController" id="I6p-8a-yYj" customClass="PredictorViewController" customModule="MyEuro2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gPS-kA-RDg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bld-C8-U7J">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Egs-uU-aow"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bld-C8-U7J" firstAttribute="top" secondItem="Egs-uU-aow" secondAttribute="top" id="Eaa-lO-IYo"/>
+                            <constraint firstItem="Egs-uU-aow" firstAttribute="bottom" secondItem="bld-C8-U7J" secondAttribute="bottom" id="mzh-2a-poZ"/>
+                            <constraint firstItem="Egs-uU-aow" firstAttribute="trailing" secondItem="bld-C8-U7J" secondAttribute="trailing" id="qmi-OF-9QU"/>
+                            <constraint firstItem="bld-C8-U7J" firstAttribute="leading" secondItem="Egs-uU-aow" secondAttribute="leading" id="zec-KU-GUj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="bld-C8-U7J" id="xKX-p5-nr8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VVZ-eA-o7Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1048" y="785"/>
+        </scene>
+        <!--Predictor Details View Controller-->
+        <scene sceneID="ACG-Bi-JlC">
+            <objects>
+                <viewController storyboardIdentifier="PredictorDetailsViewController" id="TrF-4e-9Lw" customClass="PredictorDetailsViewController" customModule="MyEuro2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k4G-t4-3Ua" customClass="PredictorDe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="OYZ-mF-Dsc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JtU-72-nEo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="785"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="xxb-nE-GBU">
+            <objects>
+                <tabBarController id="ajF-D6-ea2" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="jBM-Gv-Yox"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Gsg-R5-7Bk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Oc6-dv-Jfz" kind="relationship" relationship="viewControllers" id="wom-gt-1rV"/>
+                        <segue destination="3LJ-qx-D7W" kind="relationship" relationship="viewControllers" id="40z-Mp-c3J"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQP-J3-fFf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1788" y="139"/>
+        </scene>
+        <!--Match Details View Controller-->
+        <scene sceneID="Pm7-ol-SGB">
+            <objects>
+                <viewController storyboardIdentifier="MatchDetailsViewController" id="mXF-68-ASl" customClass="MatchDetailsViewController" customModule="MyEuro2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r7u-Zn-e33">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rqe-Yb-r1e"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdX-wP-pLo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3406" y="-197"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="P4Z-eZ-XwJ">
+            <objects>
+                <viewController storyboardIdentifier="ResultsViewController" id="Oc6-dv-Jfz" customClass="ResultsViewController" customModule="MyEuro2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fUX-Cy-f4s">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRZ-N1-zsp">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sGu-mf-IR9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JRZ-N1-zsp" firstAttribute="top" secondItem="sGu-mf-IR9" secondAttribute="top" id="Rbr-C2-wcd"/>
+                            <constraint firstItem="sGu-mf-IR9" firstAttribute="bottom" secondItem="JRZ-N1-zsp" secondAttribute="bottom" id="hj4-Xe-kT0"/>
+                            <constraint firstItem="sGu-mf-IR9" firstAttribute="trailing" secondItem="JRZ-N1-zsp" secondAttribute="trailing" id="j5z-Mp-ayJ"/>
+                            <constraint firstItem="JRZ-N1-zsp" firstAttribute="leading" secondItem="sGu-mf-IR9" secondAttribute="leading" id="pjy-FL-PVO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Results" image="r.circle" catalog="system" id="0eG-d8-UKa"/>
+                    <navigationItem key="navigationItem" id="C9q-vu-ufT"/>
+                    <connections>
+                        <outlet property="tableView" destination="JRZ-N1-zsp" id="FwG-L0-cGC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6gW-7d-NdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2663" y="-197"/>
+        </scene>
+        <!--Standings-->
+        <scene sceneID="1tt-5o-V0u">
+            <objects>
+                <viewController storyboardIdentifier="StandingsViewController" id="3LJ-qx-D7W" customClass="StandingsViewController" customModule="MyEuro2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rMf-lB-mfd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kMk-I2-9nf">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="641"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fpf-Ov-poz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fpf-Ov-poz" firstAttribute="trailing" secondItem="kMk-I2-9nf" secondAttribute="trailing" id="L7d-Yh-OXT"/>
+                            <constraint firstItem="Fpf-Ov-poz" firstAttribute="bottom" secondItem="kMk-I2-9nf" secondAttribute="bottom" id="hyg-Kg-USH"/>
+                            <constraint firstItem="kMk-I2-9nf" firstAttribute="leading" secondItem="Fpf-Ov-poz" secondAttribute="leading" id="tde-dN-6Jd"/>
+                            <constraint firstItem="kMk-I2-9nf" firstAttribute="top" secondItem="Fpf-Ov-poz" secondAttribute="top" id="uk7-UQ-5AZ"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Standings" image="s.circle" catalog="system" id="YFt-pk-UNH"/>
+                    <navigationItem key="navigationItem" id="dxo-3d-HEr"/>
+                    <connections>
+                        <outlet property="tableView" destination="kMk-I2-9nf" id="epe-vz-EvG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OMh-l9-2AH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662" y="471"/>
+        </scene>
+        <!--Team Details View Controller-->
+        <scene sceneID="5r7-4T-2fX">
+            <objects>
+                <viewController storyboardIdentifier="TeamDetailsViewController" id="N53-64-oyJ" customClass="TeamDetailsViewController" customModule="MyEuro2020" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iwT-cS-0f1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="qSj-xG-UeB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zm-IO-5I6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3405.5999999999999" y="470.68965517241384"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="YYJ-Nx-eWQ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LDL-cQ-NRI" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <toolbarItems/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="4B2-iT-KNk">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="DAu-wC-87h"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zTQ-8V-xgI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="271" y="139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="r.circle" catalog="system" width="128" height="121"/>
+        <image name="s.circle" catalog="system" width="128" height="121"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

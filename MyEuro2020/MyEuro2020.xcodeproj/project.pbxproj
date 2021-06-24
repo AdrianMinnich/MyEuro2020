@@ -1,0 +1,860 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0CA7588DA663687FDDDA1212 /* Pods_MyEuro2020.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 394B7115E1DC288B780457E7 /* Pods_MyEuro2020.framework */; };
+		840CEB07267CEF570093581D /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CEB06267CEF570093581D /* Group.swift */; };
+		840CEB09267D5ACB0093581D /* TeamTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CEB08267D5ACB0093581D /* TeamTableViewCell.swift */; };
+		840CEB0B267D5C180093581D /* TeamDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840CEB0A267D5C180093581D /* TeamDetailsViewController.swift */; };
+		845AA0632685212800208599 /* MatchBracket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AA0622685212800208599 /* MatchBracket.swift */; };
+		845AA065268524B700208599 /* PredictorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AA064268524B700208599 /* PredictorTableViewCell.swift */; };
+		845AA0672685260900208599 /* PredictorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845AA0662685260900208599 /* PredictorDetailsViewController.swift */; };
+		846BDB54267BB0AB00316430 /* Stadium.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846BDB53267BB0AB00316430 /* Stadium.swift */; };
+		846CF7F42674D4F7009755A3 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CF7F32674D4F7009755A3 /* ResultsViewController.swift */; };
+		846CF7F62674D504009755A3 /* StandingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CF7F52674D504009755A3 /* StandingsViewController.swift */; };
+		846CF7F82674D708009755A3 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CF7F72674D708009755A3 /* Match.swift */; };
+		846CF7FA2674D9EE009755A3 /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CF7F92674D9EE009755A3 /* DatabaseManager.swift */; };
+		846CF7FC2674DC05009755A3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 846CF7FB2674DC05009755A3 /* GoogleService-Info.plist */; };
+		846CF80326756F42009755A3 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846CF80226756F42009755A3 /* Team.swift */; };
+		846D49FB267AA17A00669682 /* MatchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D49FA267AA17A00669682 /* MatchTableViewCell.swift */; };
+		846D49FD267AA83000669682 /* Extenstions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846D49FC267AA83000669682 /* Extenstions.swift */; };
+		847F62942669918F00B07F02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F62932669918F00B07F02 /* AppDelegate.swift */; };
+		847F62962669918F00B07F02 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F62952669918F00B07F02 /* SceneDelegate.swift */; };
+		847F62982669918F00B07F02 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F62972669918F00B07F02 /* MainViewController.swift */; };
+		847F629B2669918F00B07F02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F62992669918F00B07F02 /* Main.storyboard */; };
+		847F629D2669919400B07F02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847F629C2669919400B07F02 /* Assets.xcassets */; };
+		847F62A02669919400B07F02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847F629E2669919400B07F02 /* LaunchScreen.storyboard */; };
+		847F62AB2669919500B07F02 /* MyEuro2020Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F62AA2669919500B07F02 /* MyEuro2020Tests.swift */; };
+		847F62B62669919500B07F02 /* MyEuro2020UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847F62B52669919500B07F02 /* MyEuro2020UITests.swift */; };
+		84A7F75826741F7300B216DA /* PredictorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7F75726741F7300B216DA /* PredictorViewController.swift */; };
+		84F4AC0826780B4D0075920F /* MatchDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F4AC0726780B4D0075920F /* MatchDetailsViewController.swift */; };
+		95F02BE36CDD532B8260DEFA /* Pods_MyEuro2020Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF49429DA224013D00F31CB9 /* Pods_MyEuro2020Tests.framework */; };
+		B3204BFA29D9EC8E33B0AB8D /* Pods_MyEuro2020_MyEuro2020UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9B5AC3BF8EA8D958E677099B /* Pods_MyEuro2020_MyEuro2020UITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		847F62A72669919500B07F02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847F62882669918F00B07F02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847F628F2669918F00B07F02;
+			remoteInfo = MyEuro2020;
+		};
+		847F62B22669919500B07F02 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847F62882669918F00B07F02 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847F628F2669918F00B07F02;
+			remoteInfo = MyEuro2020;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		394B7115E1DC288B780457E7 /* Pods_MyEuro2020.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyEuro2020.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		596E8271B5E6E67559FFABA7 /* Pods-MyEuro2020-MyEuro2020UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEuro2020-MyEuro2020UITests.release.xcconfig"; path = "Target Support Files/Pods-MyEuro2020-MyEuro2020UITests/Pods-MyEuro2020-MyEuro2020UITests.release.xcconfig"; sourceTree = "<group>"; };
+		7AF0E2C857D165532152B442 /* Pods-MyEuro2020Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEuro2020Tests.release.xcconfig"; path = "Target Support Files/Pods-MyEuro2020Tests/Pods-MyEuro2020Tests.release.xcconfig"; sourceTree = "<group>"; };
+		840CEB06267CEF570093581D /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		840CEB08267D5ACB0093581D /* TeamTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamTableViewCell.swift; sourceTree = "<group>"; };
+		840CEB0A267D5C180093581D /* TeamDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailsViewController.swift; sourceTree = "<group>"; };
+		845AA0622685212800208599 /* MatchBracket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchBracket.swift; sourceTree = "<group>"; };
+		845AA064268524B700208599 /* PredictorTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictorTableViewCell.swift; sourceTree = "<group>"; };
+		845AA0662685260900208599 /* PredictorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictorDetailsViewController.swift; sourceTree = "<group>"; };
+		846BDB53267BB0AB00316430 /* Stadium.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stadium.swift; sourceTree = "<group>"; };
+		846CF7F32674D4F7009755A3 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		846CF7F52674D504009755A3 /* StandingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandingsViewController.swift; sourceTree = "<group>"; };
+		846CF7F72674D708009755A3 /* Match.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
+		846CF7F92674D9EE009755A3 /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
+		846CF7FB2674DC05009755A3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		846CF80226756F42009755A3 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		846D49FA267AA17A00669682 /* MatchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchTableViewCell.swift; sourceTree = "<group>"; };
+		846D49FC267AA83000669682 /* Extenstions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extenstions.swift; sourceTree = "<group>"; };
+		847F62902669918F00B07F02 /* MyEuro2020.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyEuro2020.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		847F62932669918F00B07F02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		847F62952669918F00B07F02 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		847F62972669918F00B07F02 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		847F629A2669918F00B07F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		847F629C2669919400B07F02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		847F629F2669919400B07F02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		847F62A12669919400B07F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847F62A62669919500B07F02 /* MyEuro2020Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyEuro2020Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		847F62AA2669919500B07F02 /* MyEuro2020Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEuro2020Tests.swift; sourceTree = "<group>"; };
+		847F62AC2669919500B07F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847F62B12669919500B07F02 /* MyEuro2020UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyEuro2020UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		847F62B52669919500B07F02 /* MyEuro2020UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyEuro2020UITests.swift; sourceTree = "<group>"; };
+		847F62B72669919500B07F02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84957158EA4743AD07A7FEA3 /* Pods-MyEuro2020-MyEuro2020UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEuro2020-MyEuro2020UITests.debug.xcconfig"; path = "Target Support Files/Pods-MyEuro2020-MyEuro2020UITests/Pods-MyEuro2020-MyEuro2020UITests.debug.xcconfig"; sourceTree = "<group>"; };
+		84A7F75726741F7300B216DA /* PredictorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PredictorViewController.swift; sourceTree = "<group>"; };
+		84F4AC0726780B4D0075920F /* MatchDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchDetailsViewController.swift; sourceTree = "<group>"; };
+		9B5AC3BF8EA8D958E677099B /* Pods_MyEuro2020_MyEuro2020UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyEuro2020_MyEuro2020UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0F170A602F6CACC95CADC30 /* Pods-MyEuro2020.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEuro2020.release.xcconfig"; path = "Target Support Files/Pods-MyEuro2020/Pods-MyEuro2020.release.xcconfig"; sourceTree = "<group>"; };
+		B773388CEEEB552C3DADA57D /* Pods-MyEuro2020.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEuro2020.debug.xcconfig"; path = "Target Support Files/Pods-MyEuro2020/Pods-MyEuro2020.debug.xcconfig"; sourceTree = "<group>"; };
+		C533DFFD981E185CD60BBCA7 /* Pods-MyEuro2020Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyEuro2020Tests.debug.xcconfig"; path = "Target Support Files/Pods-MyEuro2020Tests/Pods-MyEuro2020Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		EF49429DA224013D00F31CB9 /* Pods_MyEuro2020Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyEuro2020Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		847F628D2669918F00B07F02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0CA7588DA663687FDDDA1212 /* Pods_MyEuro2020.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847F62A32669919500B07F02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95F02BE36CDD532B8260DEFA /* Pods_MyEuro2020Tests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847F62AE2669919500B07F02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3204BFA29D9EC8E33B0AB8D /* Pods_MyEuro2020_MyEuro2020UITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		707C7D51C39A4294DE6E5836 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				394B7115E1DC288B780457E7 /* Pods_MyEuro2020.framework */,
+				9B5AC3BF8EA8D958E677099B /* Pods_MyEuro2020_MyEuro2020UITests.framework */,
+				EF49429DA224013D00F31CB9 /* Pods_MyEuro2020Tests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		847F62872669918F00B07F02 = {
+			isa = PBXGroup;
+			children = (
+				847F62922669918F00B07F02 /* MyEuro2020 */,
+				847F62A92669919500B07F02 /* MyEuro2020Tests */,
+				847F62B42669919500B07F02 /* MyEuro2020UITests */,
+				847F62912669918F00B07F02 /* Products */,
+				CF7DFC7958B763287B2CDFC2 /* Pods */,
+				707C7D51C39A4294DE6E5836 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		847F62912669918F00B07F02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				847F62902669918F00B07F02 /* MyEuro2020.app */,
+				847F62A62669919500B07F02 /* MyEuro2020Tests.xctest */,
+				847F62B12669919500B07F02 /* MyEuro2020UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		847F62922669918F00B07F02 /* MyEuro2020 */ = {
+			isa = PBXGroup;
+			children = (
+				846CF7FB2674DC05009755A3 /* GoogleService-Info.plist */,
+				84A7F754267416D500B216DA /* Resources */,
+				84A7F753267416CD00B216DA /* ViewModel */,
+				84A7F752267416C800B216DA /* Controller */,
+				84A7F751267416C200B216DA /* View */,
+				84A7F750267416B300B216DA /* Model */,
+				847F629C2669919400B07F02 /* Assets.xcassets */,
+				847F62A12669919400B07F02 /* Info.plist */,
+			);
+			path = MyEuro2020;
+			sourceTree = "<group>";
+		};
+		847F62A92669919500B07F02 /* MyEuro2020Tests */ = {
+			isa = PBXGroup;
+			children = (
+				847F62AA2669919500B07F02 /* MyEuro2020Tests.swift */,
+				847F62AC2669919500B07F02 /* Info.plist */,
+			);
+			path = MyEuro2020Tests;
+			sourceTree = "<group>";
+		};
+		847F62B42669919500B07F02 /* MyEuro2020UITests */ = {
+			isa = PBXGroup;
+			children = (
+				847F62B52669919500B07F02 /* MyEuro2020UITests.swift */,
+				847F62B72669919500B07F02 /* Info.plist */,
+			);
+			path = MyEuro2020UITests;
+			sourceTree = "<group>";
+		};
+		84A7F750267416B300B216DA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				846CF7F72674D708009755A3 /* Match.swift */,
+				846CF80226756F42009755A3 /* Team.swift */,
+				846BDB53267BB0AB00316430 /* Stadium.swift */,
+				840CEB06267CEF570093581D /* Group.swift */,
+				845AA0622685212800208599 /* MatchBracket.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		84A7F751267416C200B216DA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				846D49FA267AA17A00669682 /* MatchTableViewCell.swift */,
+				840CEB08267D5ACB0093581D /* TeamTableViewCell.swift */,
+				845AA064268524B700208599 /* PredictorTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		84A7F752267416C800B216DA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				847F62972669918F00B07F02 /* MainViewController.swift */,
+				84A7F75726741F7300B216DA /* PredictorViewController.swift */,
+				846CF7F32674D4F7009755A3 /* ResultsViewController.swift */,
+				846CF7F52674D504009755A3 /* StandingsViewController.swift */,
+				84F4AC0726780B4D0075920F /* MatchDetailsViewController.swift */,
+				840CEB0A267D5C180093581D /* TeamDetailsViewController.swift */,
+				845AA0662685260900208599 /* PredictorDetailsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		84A7F753267416CD00B216DA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		84A7F754267416D500B216DA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				847F62932669918F00B07F02 /* AppDelegate.swift */,
+				847F62952669918F00B07F02 /* SceneDelegate.swift */,
+				847F629E2669919400B07F02 /* LaunchScreen.storyboard */,
+				847F62992669918F00B07F02 /* Main.storyboard */,
+				846CF7F92674D9EE009755A3 /* DatabaseManager.swift */,
+				846D49FC267AA83000669682 /* Extenstions.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		CF7DFC7958B763287B2CDFC2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B773388CEEEB552C3DADA57D /* Pods-MyEuro2020.debug.xcconfig */,
+				B0F170A602F6CACC95CADC30 /* Pods-MyEuro2020.release.xcconfig */,
+				84957158EA4743AD07A7FEA3 /* Pods-MyEuro2020-MyEuro2020UITests.debug.xcconfig */,
+				596E8271B5E6E67559FFABA7 /* Pods-MyEuro2020-MyEuro2020UITests.release.xcconfig */,
+				C533DFFD981E185CD60BBCA7 /* Pods-MyEuro2020Tests.debug.xcconfig */,
+				7AF0E2C857D165532152B442 /* Pods-MyEuro2020Tests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		847F628F2669918F00B07F02 /* MyEuro2020 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847F62BA2669919500B07F02 /* Build configuration list for PBXNativeTarget "MyEuro2020" */;
+			buildPhases = (
+				BBD7C02CA76D4BE567EAE5AC /* [CP] Check Pods Manifest.lock */,
+				847F628C2669918F00B07F02 /* Sources */,
+				847F628D2669918F00B07F02 /* Frameworks */,
+				847F628E2669918F00B07F02 /* Resources */,
+				F1A03BC4DF4F7132D344170D /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyEuro2020;
+			productName = MyEuro2020;
+			productReference = 847F62902669918F00B07F02 /* MyEuro2020.app */;
+			productType = "com.apple.product-type.application";
+		};
+		847F62A52669919500B07F02 /* MyEuro2020Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847F62BD2669919500B07F02 /* Build configuration list for PBXNativeTarget "MyEuro2020Tests" */;
+			buildPhases = (
+				B424A08509C340657CF46521 /* [CP] Check Pods Manifest.lock */,
+				847F62A22669919500B07F02 /* Sources */,
+				847F62A32669919500B07F02 /* Frameworks */,
+				847F62A42669919500B07F02 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				847F62A82669919500B07F02 /* PBXTargetDependency */,
+			);
+			name = MyEuro2020Tests;
+			productName = MyEuro2020Tests;
+			productReference = 847F62A62669919500B07F02 /* MyEuro2020Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		847F62B02669919500B07F02 /* MyEuro2020UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847F62C02669919500B07F02 /* Build configuration list for PBXNativeTarget "MyEuro2020UITests" */;
+			buildPhases = (
+				E97D589A9F34AA14F593F929 /* [CP] Check Pods Manifest.lock */,
+				847F62AD2669919500B07F02 /* Sources */,
+				847F62AE2669919500B07F02 /* Frameworks */,
+				847F62AF2669919500B07F02 /* Resources */,
+				FA15DE548275F7E4BE4A4FA2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				847F62B32669919500B07F02 /* PBXTargetDependency */,
+			);
+			name = MyEuro2020UITests;
+			productName = MyEuro2020UITests;
+			productReference = 847F62B12669919500B07F02 /* MyEuro2020UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		847F62882669918F00B07F02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					847F628F2669918F00B07F02 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+					847F62A52669919500B07F02 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 847F628F2669918F00B07F02;
+					};
+					847F62B02669919500B07F02 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 847F628F2669918F00B07F02;
+					};
+				};
+			};
+			buildConfigurationList = 847F628B2669918F00B07F02 /* Build configuration list for PBXProject "MyEuro2020" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 847F62872669918F00B07F02;
+			productRefGroup = 847F62912669918F00B07F02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				847F628F2669918F00B07F02 /* MyEuro2020 */,
+				847F62A52669919500B07F02 /* MyEuro2020Tests */,
+				847F62B02669919500B07F02 /* MyEuro2020UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		847F628E2669918F00B07F02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847F62A02669919400B07F02 /* LaunchScreen.storyboard in Resources */,
+				847F629D2669919400B07F02 /* Assets.xcassets in Resources */,
+				846CF7FC2674DC05009755A3 /* GoogleService-Info.plist in Resources */,
+				847F629B2669918F00B07F02 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847F62A42669919500B07F02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847F62AF2669919500B07F02 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B424A08509C340657CF46521 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyEuro2020Tests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBD7C02CA76D4BE567EAE5AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyEuro2020-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E97D589A9F34AA14F593F929 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MyEuro2020-MyEuro2020UITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1A03BC4DF4F7132D344170D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyEuro2020/Pods-MyEuro2020-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyEuro2020/Pods-MyEuro2020-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyEuro2020/Pods-MyEuro2020-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA15DE548275F7E4BE4A4FA2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyEuro2020-MyEuro2020UITests/Pods-MyEuro2020-MyEuro2020UITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MyEuro2020-MyEuro2020UITests/Pods-MyEuro2020-MyEuro2020UITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MyEuro2020-MyEuro2020UITests/Pods-MyEuro2020-MyEuro2020UITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		847F628C2669918F00B07F02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84F4AC0826780B4D0075920F /* MatchDetailsViewController.swift in Sources */,
+				846CF80326756F42009755A3 /* Team.swift in Sources */,
+				846D49FD267AA83000669682 /* Extenstions.swift in Sources */,
+				845AA0672685260900208599 /* PredictorDetailsViewController.swift in Sources */,
+				840CEB07267CEF570093581D /* Group.swift in Sources */,
+				845AA065268524B700208599 /* PredictorTableViewCell.swift in Sources */,
+				847F62982669918F00B07F02 /* MainViewController.swift in Sources */,
+				847F62942669918F00B07F02 /* AppDelegate.swift in Sources */,
+				846CF7FA2674D9EE009755A3 /* DatabaseManager.swift in Sources */,
+				846CF7F82674D708009755A3 /* Match.swift in Sources */,
+				846D49FB267AA17A00669682 /* MatchTableViewCell.swift in Sources */,
+				846CF7F62674D504009755A3 /* StandingsViewController.swift in Sources */,
+				846BDB54267BB0AB00316430 /* Stadium.swift in Sources */,
+				840CEB09267D5ACB0093581D /* TeamTableViewCell.swift in Sources */,
+				846CF7F42674D4F7009755A3 /* ResultsViewController.swift in Sources */,
+				84A7F75826741F7300B216DA /* PredictorViewController.swift in Sources */,
+				840CEB0B267D5C180093581D /* TeamDetailsViewController.swift in Sources */,
+				847F62962669918F00B07F02 /* SceneDelegate.swift in Sources */,
+				845AA0632685212800208599 /* MatchBracket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847F62A22669919500B07F02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847F62AB2669919500B07F02 /* MyEuro2020Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847F62AD2669919500B07F02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847F62B62669919500B07F02 /* MyEuro2020UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		847F62A82669919500B07F02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 847F628F2669918F00B07F02 /* MyEuro2020 */;
+			targetProxy = 847F62A72669919500B07F02 /* PBXContainerItemProxy */;
+		};
+		847F62B32669919500B07F02 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 847F628F2669918F00B07F02 /* MyEuro2020 */;
+			targetProxy = 847F62B22669919500B07F02 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		847F62992669918F00B07F02 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847F629A2669918F00B07F02 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		847F629E2669919400B07F02 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847F629F2669919400B07F02 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		847F62B82669919500B07F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		847F62B92669919500B07F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		847F62BB2669919500B07F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B773388CEEEB552C3DADA57D /* Pods-MyEuro2020.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S6C35H3VKZ;
+				INFOPLIST_FILE = MyEuro2020/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianminnich.MyEuro2020;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		847F62BC2669919500B07F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F170A602F6CACC95CADC30 /* Pods-MyEuro2020.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S6C35H3VKZ;
+				INFOPLIST_FILE = MyEuro2020/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianminnich.MyEuro2020;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		847F62BE2669919500B07F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C533DFFD981E185CD60BBCA7 /* Pods-MyEuro2020Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S6C35H3VKZ;
+				INFOPLIST_FILE = MyEuro2020Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianminnich.MyEuro2020Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyEuro2020.app/MyEuro2020";
+			};
+			name = Debug;
+		};
+		847F62BF2669919500B07F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AF0E2C857D165532152B442 /* Pods-MyEuro2020Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S6C35H3VKZ;
+				INFOPLIST_FILE = MyEuro2020Tests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianminnich.MyEuro2020Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MyEuro2020.app/MyEuro2020";
+			};
+			name = Release;
+		};
+		847F62C12669919500B07F02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84957158EA4743AD07A7FEA3 /* Pods-MyEuro2020-MyEuro2020UITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S6C35H3VKZ;
+				INFOPLIST_FILE = MyEuro2020UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianminnich.MyEuro2020UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyEuro2020;
+			};
+			name = Debug;
+		};
+		847F62C22669919500B07F02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 596E8271B5E6E67559FFABA7 /* Pods-MyEuro2020-MyEuro2020UITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S6C35H3VKZ;
+				INFOPLIST_FILE = MyEuro2020UITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.adrianminnich.MyEuro2020UITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MyEuro2020;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		847F628B2669918F00B07F02 /* Build configuration list for PBXProject "MyEuro2020" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847F62B82669919500B07F02 /* Debug */,
+				847F62B92669919500B07F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847F62BA2669919500B07F02 /* Build configuration list for PBXNativeTarget "MyEuro2020" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847F62BB2669919500B07F02 /* Debug */,
+				847F62BC2669919500B07F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847F62BD2669919500B07F02 /* Build configuration list for PBXNativeTarget "MyEuro2020Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847F62BE2669919500B07F02 /* Debug */,
+				847F62BF2669919500B07F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847F62C02669919500B07F02 /* Build configuration list for PBXNativeTarget "MyEuro2020UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847F62C12669919500B07F02 /* Debug */,
+				847F62C22669919500B07F02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 847F62882669918F00B07F02 /* Project object */;
+}
