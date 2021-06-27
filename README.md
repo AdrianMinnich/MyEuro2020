@@ -20,4 +20,4 @@ Data are acquired asynchronously from Firebase Database where they are properly 
 
 
 
-The UEFA EURO 2020TM logo belongs to UEFA. I do not take any credit.
+<i>The UEFA EURO 2020TM logo belongs to UEFA. I do not take any credit.</i>
