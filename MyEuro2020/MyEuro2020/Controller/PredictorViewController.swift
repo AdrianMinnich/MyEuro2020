@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class PredictorViewController: UIViewController {
 
@@ -24,6 +25,8 @@ class PredictorViewController: UIViewController {
     
     var matchdays = [[MatchBracket]]()
     
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,11 +37,14 @@ class PredictorViewController: UIViewController {
     }
     
     // 1. getting data from database (matches) (Database Manager method) DONE
-    // 2. table view with matches ( 1/8, 1/4, 1/2...) (tableView methods) DONE (dodac label guess the result)
-    // 3. possibility to predict exact score (PredictorDetailsViewController)
-    // 4. locking picks 5 minutes before game (parsing date and checking value)
-    // 5. saving picks in Realm (save models to Realm)
-    // 6. showing which one is won and which one is lost (PredictdDetailsViewController UI)
+    // 2. table view with matches ( 1/8, 1/4, 1/2...) (tableView methods) DONE
+    // 3. possibility to predict exact score (PredictorDetailsViewController) DONE
+    // 4. locking picks when match_status is played DONE
+    // 5. saving picks in Realm (save models to Realm), while fetching data check isPredicted which are stored locally DONE
+    // 6. showing which one is won and which one is lost (PredictdDetailsViewController UI) DONE
+    // 7. refreshing tableview after coming back from predictor details view controller automatically NOTDONE
+    // 8. update database DONE
+    // 9. unit tests ...
     
     // MARK: - Helper functions
     
@@ -46,6 +52,7 @@ class PredictorViewController: UIViewController {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+        print("reload table view")
     }
     
     // MARK: - Helper functions
@@ -112,11 +119,12 @@ class PredictorViewController: UIViewController {
                 self?.matches = matchesCollection
                 print("got all matches!")
                 
-                self?.reloadTableView()
-                
                 self?.assignTeamsToMatches()
                 self?.assignStadiumsToMatches()
+                self?.getPredictedResultsFromCache()
                 self?.assignMatchesToMatchdays()
+                
+                self?.reloadTableView()
                 
             case .failure(let error):
                 print("failed to get matches: \(error)")
@@ -154,6 +162,30 @@ class PredictorViewController: UIViewController {
         matchdays.append(semiFinals)
         matchdays.append(final)
     }
+    
+    private func getPredictedResultsFromCache() {
+        let predictedResults = realm.objects(MatchBracketPredictedRealm.self) // put as variable in ViewController and creates observer for changing that value
+        print("GET PREDICTED RESULTS FROM CACHE")
+        for i in 0..<predictedResults.count {
+            let index = matches.firstIndex(where: { $0.id == predictedResults[i].id})
+            print(index!)
+            matches[index!].predictedHomeResult = predictedResults[i].predictedHome
+            matches[index!].predictedAwayResult = predictedResults[i].predictedAway
+            matches[index!].isPredicted = true
+            matches[index!].predictedResult = assignPredictedResult(match: predictedResults[i])
+        }
+    }
+    
+    private func assignPredictedResult(match: MatchBracketPredictedRealm) -> MatchResult{
+            
+        if match.predictedHome > match.predictedAway {
+            return .HomeWin
+        } else if match.predictedHome < match.predictedAway {
+            return .AwayWin
+        } else {
+            return .Draw
+        }
+    }
 }
 
 // MARK: - Table View Methods
@@ -186,6 +218,7 @@ extension PredictorViewController: UITableViewDelegate, UITableViewDataSource {
         let model = matchdays[indexPath.section][indexPath.row]
         let vc = storyboard?.instantiateViewController(identifier: PredictorDetailsViewController.identifier) as! PredictorDetailsViewController
         vc.match = model
+        vc.delegate = self
         navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -209,4 +242,14 @@ extension PredictorViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return ""
     }
+}
+
+extension PredictorViewController: UpdateDataDelegate {
+    
+    func updateCacheData() {
+        getPredictedResultsFromCache()
+        assignMatchesToMatchdays()
+        reloadTableView()
+    }
+ 
 }

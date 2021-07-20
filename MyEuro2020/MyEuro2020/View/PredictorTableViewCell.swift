@@ -149,13 +149,49 @@ class PredictorTableViewCell: UITableViewCell {
         awayTeamLabel.text = model.away
         
         if model.matchStatus == "not_played" {
-            resultLabel.text = formatDateString(date: model.date)
-            resultLabel.font = .systemFont(ofSize: 16, weight: .bold)
-            dateLabel.text = ""
+            if model.isPredicted == true {
+                if let predictedHomeResult = model.predictedHomeResult,
+                   let predictedAwayResult = model.predictedAwayResult {
+                    resultLabel.text = "\(predictedHomeResult) - \(predictedAwayResult)"
+                }
+            }
+            else {
+                resultLabel.text = "Predict the score!"
+                resultLabel.font = .systemFont(ofSize: 16, weight: .bold)
+            }
+            
+            dateLabel.text = formatDateString(date: model.date)
+            
         } else {
+            if model.isPredicted == true {
+                if let predictedHomeResult = model.predictedHomeResult,
+                   let predictedAwayResult = model.predictedAwayResult,
+                   let predictedResult = model.predictedResult {
+                    dateLabel.text = "Your bet: \(predictedHomeResult)-\(predictedAwayResult)"
+                    
+                    if model.matchStatus == "played" {
+                        if model.homeResult == predictedHomeResult && model.awayResult == predictedAwayResult {
+                            dateLabel.textColor = .systemGreen
+                        }
+                        else if model.matchResult == predictedResult {
+                            dateLabel.textColor = .systemYellow
+                        }
+                        else {
+                            dateLabel.textColor = .systemRed
+                        }
+                    }
+                    else {
+                        dateLabel.textColor = .gray
+                    }
+                    
+                }
+            }
+            else {
+                dateLabel.text = formatDateString(date: model.date)
+            }
+            
             resultLabel.text = "\(model.homeResult) - \(model.awayResult)"
             resultLabel.font = .systemFont(ofSize: 30, weight: .bold)
-            dateLabel.text = formatDateString(date: model.date)
         }
     }
     

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import RealmSwift
 
 struct MatchBracket {
     var id: Int
@@ -17,6 +18,7 @@ struct MatchBracket {
     var homeResult: Int
     var awayResult: Int
     var matchStatus: String
+    var matchResult: MatchResult
     
     var homeTeam: Team?
     var awayTeam: Team?
@@ -24,10 +26,18 @@ struct MatchBracket {
     
     var predictedHomeResult: Int?
     var predictedAwayResult: Int?
-    var predictedResult: PredictedResult?
+    var predictedResult: MatchResult?
+    var isPredicted: Bool = false
 }
 
-enum PredictedResult {
+class MatchBracketPredictedRealm: Object {
+    @objc dynamic var id: Int = -1
+    @objc dynamic var predictedHome: Int = -1
+    @objc dynamic var predictedAway: Int = -1
+    @objc dynamic var isPredicted: Bool = false
+}
+
+enum MatchResult {
     case HomeWin
     case AwayWin
     case Draw

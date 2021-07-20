@@ -132,7 +132,18 @@ final class DatabaseManager {
                       let matchStatus = dictionary["match_status"] as? String else {
                         return nil
                 }
-                return MatchBracket(id: id, home: home, away: away, date: date, place: place, stage: stage, homeResult: homeResult, awayResult: awayResult, matchStatus: matchStatus)
+                
+                let matchResult: MatchResult
+                
+                if homeResult > awayResult {
+                    matchResult = MatchResult.HomeWin
+                } else if homeResult < awayResult {
+                    matchResult = MatchResult.AwayWin
+                } else {
+                    matchResult = MatchResult.Draw
+                }
+                
+                return MatchBracket(id: id, home: home, away: away, date: date, place: place, stage: stage, homeResult: homeResult, awayResult: awayResult, matchStatus: matchStatus, matchResult: matchResult)
                       
             })
             completion(.success(matches))

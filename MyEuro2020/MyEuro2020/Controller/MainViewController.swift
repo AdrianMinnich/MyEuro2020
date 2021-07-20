@@ -19,9 +19,6 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func didTapResultsButton(_ sender: Any) {
-        //let vc = storyboard?.instantiateViewController(identifier: ResultsViewController.identifier) as! ResultsViewController
-        
-        //navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func didTapPredictorButton(_ sender: Any) {
