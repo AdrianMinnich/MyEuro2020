@@ -17,9 +17,10 @@ Data are acquired asynchronously from Firebase Database where they are properly 
 
 ## MyEuro 2020 Predictor
 
-// TO DO
+// Predictor part is done. Screens need to be uploaded. Long story short: Predictor allows user to enter the prediction before the game and shows a result of prediction after the game.
 
 
+// TODO: Unit tests
 
 
 <i>The UEFA EURO 2020TM logo belongs to UEFA. I do not take any credit.</i>
